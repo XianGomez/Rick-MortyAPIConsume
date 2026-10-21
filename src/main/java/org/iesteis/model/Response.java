@@ -1,28 +1,21 @@
 package org.iesteis.model;
 
+import java.util.List;
 import com.fasterxml.jackson.annotation.JsonProperty;
 
-import java.util.List;
-
 public class Response{
-	@JsonProperty(value="results")
-	private List<Character> characters;
+
+	@JsonProperty("results")
+	private List<Personaje> characters;
+
+	@JsonProperty("info")
 	private Info info;
 
-	public List<Character> getCharacters(){
+	public List<Personaje> getCharacters(){
 		return characters;
 	}
 
 	public Info getInfo(){
 		return info;
 	}
-
-	@Override
- 	public String toString(){
-		return 
-			"Response{" + 
-			"results = '" + characters + '\'' +
-			",info = '" + info + '\'' + 
-			"}";
-		}
 }
